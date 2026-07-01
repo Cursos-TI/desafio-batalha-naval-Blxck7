@@ -23,27 +23,37 @@ int main(){
         tabuleiro[5 + i][7] = 3;
     }
 
-    // 5 -  Mostrando o Tabuleiro
+    // 5 - Navio na Diagonal (Esquerda para direita)
+    for(int i = 0; i < 3; i++){
+        tabuleiro[4 + i][1 + i] = 3;
+    }
+
+    // 6 - Navio na Diagonal (Direita para esquerda)
+    for(int i = 0; i < 3; i++){
+        tabuleiro[9 - i][3 + i] = 3;
+    }
+
+    // 7 -  Mostrando o Tabuleiro
     printf("TABULEIRO BATALHA NAVAL\n");
     printf("  ");
 
-    // 6 - Mostra as letras da Coordenada
+    // 8 - Mostra as letras da Coordenada
     for(int i = 0; i < 10; i++){
         printf(" %c", linha[i]);
     }
     printf("\n");
 
-    // 7 - Mostra os números da Coordenada
+    // 9 - Mostra os números da Coordenada
     for(int i = 0; i < 10; i++){
 
-    // 8 - Ajustando o 10 para ele não ficar fora de linha no tabuleiro
+    // 10 - Ajustando o 10 para ele não ficar fora de linha no tabuleiro
         if(i == 9){
             printf("%d", i + 1);
         } else {
             printf(" %d", i + 1);
         }
 
-    // 9 - Exibe o tabuleiro
+    // 11 - Exibe o tabuleiro
     for (int j = 0; j < 10; j++){
         printf(" %d", tabuleiro[i][j]);
         }
